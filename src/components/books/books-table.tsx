@@ -11,7 +11,7 @@ import {
 } from "../ui/table";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { TrashIcon } from "lucide-react";
+import { BookOpenIcon, TrashIcon } from "lucide-react";
 
 export function BooksTable() {
     const queryClient = useQueryClient();
@@ -25,6 +25,20 @@ export function BooksTable() {
             });
         },
     });
+
+    if (data.length === 0) {
+        return (
+            <div className="flex flex-col items-center justify-center py-16 px-4 border rounded-lg bg-muted/20">
+                <div className="rounded-full bg-muted p-4 mb-4">
+                    <BookOpenIcon className="h-8 w-8 text-muted-foreground" />
+                </div>
+                <h3 className="text-lg font-semibold mb-1">No hay libros registrados</h3>
+                <p className="text-sm text-muted-foreground text-center max-w-sm">
+                    Comienza agregando tu primer libro a la biblioteca usando el botón "Crear libro".
+                </p>
+            </div>
+        );
+    }
 
     return (
         <Table>

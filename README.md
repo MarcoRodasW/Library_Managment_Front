@@ -1,102 +1,102 @@
-# Library Management System - Frontend
+# Sistema de Gestión de Biblioteca - Frontend
 
-A modern React application for managing a library system, including books, clients, and loans management.
+Una aplicación moderna en React para gestionar un sistema de biblioteca, incluyendo administración de libros, clientes y préstamos.
 
-## Tech Stack
+## Stack Tecnológico
 
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **TailwindCSS 4** - Styling
-- **TanStack Query** - Server state management
-- **React Hook Form + Zod** - Form handling and validation
-- **Radix UI** - Accessible UI primitives
-- **Lucide React** - Icons
+- **React 19** - Biblioteca de UI
+- **TypeScript** - Tipado estático
+- **Vite** - Herramienta de build y servidor de desarrollo
+- **TailwindCSS 4** - Estilos
+- **TanStack Query** - Gestión de estado del servidor
+- **React Hook Form + Zod** - Manejo de formularios y validación
+- **Radix UI** - Primitivos de UI accesibles
+- **Lucide React** - Iconos
 
-## Prerequisites
+## Requisitos Previos
 
-- Node.js 18+ 
-- npm, yarn, or pnpm
+- Node.js 18+
+- npm, yarn o pnpm
 
-## Installation
+## Instalación
 
-1. Clone the repository:
+1. Clona el repositorio:
 ```bash
-git clone <repository-url>
+git clone <url-del-repositorio>
 cd library_managment_front
 ```
 
-2. Install dependencies:
+2. Instala las dependencias:
 ```bash
 npm install
-# or
+# o
 yarn install
-# or
+# o
 pnpm install
 ```
 
-3. Set up environment variables:
+3. Configura las variables de entorno:
 ```bash
 cp .env.example .env
 ```
 
-4. Edit `.env` and configure the API URL:
+4. Edita `.env` y configura la URL de la API:
 ```
 VITE_API_URL=http://localhost:5124/api
 ```
 
-## Development
+## Desarrollo
 
-Start the development server:
+Inicia el servidor de desarrollo:
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+La aplicación estará disponible en `http://localhost:5173`
 
-## Build
+## Compilación
 
-Build for production:
+Compila para producción:
 ```bash
 npm run build
 ```
 
-Preview the production build:
+Previsualiza la compilación de producción:
 ```bash
 npm run preview
 ```
 
 ## Linting
 
-Run ESLint:
+Ejecuta ESLint:
 ```bash
 npm run lint
 ```
 
-## Project Structure
+## Estructura del Proyecto
 
 ```
 src/
 ├── components/
-│   ├── books/          # Book-related components
-│   ├── clients/        # Client-related components
-│   ├── loans/          # Loan-related components
-│   └── ui/             # Reusable UI components
+│   ├── books/          # Componentes relacionados con libros
+│   ├── clients/        # Componentes relacionados con clientes
+│   ├── loans/          # Componentes relacionados con préstamos
+│   └── ui/             # Componentes de UI reutilizables
 ├── lib/
-│   └── api/            # API functions and types
-├── App.tsx             # Main application component
-└── main.tsx            # Application entry point
+│   └── api/            # Funciones y tipos de API
+├── App.tsx             # Componente principal de la aplicación
+└── main.tsx            # Punto de entrada de la aplicación
 ```
 
-## Features
+## Funcionalidades
 
-- **Books Management**: View, create, and delete books
-- **Clients Management**: View and create clients, view client loan history
-- **Loans Management**: View all loans with expandable details, create new loans
-- **Responsive Design**: Works on desktop and mobile devices
+- **Gestión de Libros**: Ver, crear y eliminar libros
+- **Gestión de Clientes**: Ver y crear clientes, consultar historial de préstamos
+- **Gestión de Préstamos**: Ver todos los préstamos con detalles expandibles, crear nuevos préstamos
+- **Diseño Responsivo**: Funciona en escritorio y dispositivos móviles
 
-## Environment Variables
+## Variables de Entorno
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `VITE_API_URL` | Backend API base URL | `http://localhost:5124/api` |
+| Variable | Descripción | Valor por defecto |
+|----------|-------------|-------------------|
+| `VITE_API_URL` | URL base de la API del backend | `http://localhost:5124/api` |
